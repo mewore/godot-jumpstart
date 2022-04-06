@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://environment/AutoLightOccluder.cs" type="Script" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+cull_mode = 2
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8, -8, -8 )
+
+[node name="AutoLightOccluder" type="LightOccluder2D"]
+occluder = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}

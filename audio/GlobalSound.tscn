@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://audio/GlobalSound.cs" type="Script" id=2]
+
+[node name="GlobalSound" type="Node"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = "Music"
+
+[node name="ClearLevel" type="AudioStreamPlayer" parent="."]
+pitch_scale = 0.69
+bus = "SFX"
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+volume_db = 0.901
+pitch_scale = 0.69
+bus = "SFX"

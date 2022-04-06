@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui/SoundControl.cs" type="Script" id=1]
+
+[node name="SoundControl" type="VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 300, 16 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Master" type="HBoxContainer" parent="."]
+margin_right = 300.0
+margin_bottom = 16.0
+
+[node name="Label" type="Label" parent="Master"]
+margin_top = 1.0
+margin_right = 148.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "Volume: "
+align = 2
+
+[node name="MasterSlider" type="HSlider" parent="Master"]
+margin_left = 152.0
+margin_right = 300.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+rounded = true
+
+[node name="Sfx" type="HBoxContainer" parent="."]
+margin_top = 20.0
+margin_right = 300.0
+margin_bottom = 36.0
+
+[node name="Label" type="Label" parent="Sfx"]
+margin_top = 1.0
+margin_right = 148.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "SFX volume: "
+align = 2
+
+[node name="SfxSlider" type="HSlider" parent="Sfx"]
+margin_left = 152.0
+margin_right = 300.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+rounded = true
+
+[node name="Music" type="HBoxContainer" parent="."]
+margin_top = 40.0
+margin_right = 300.0
+margin_bottom = 56.0
+
+[node name="Label" type="Label" parent="Music"]
+margin_top = 1.0
+margin_right = 148.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+text = "Music volume: "
+align = 2
+
+[node name="MusicSlider" type="HSlider" parent="Music"]
+margin_left = 152.0
+margin_right = 300.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+rounded = true
+
+[connection signal="value_changed" from="Master/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
+[connection signal="value_changed" from="Sfx/SfxSlider" to="." method="_on_SfxSlider_value_changed"]
+[connection signal="value_changed" from="Music/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
