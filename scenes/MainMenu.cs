@@ -33,6 +33,7 @@ public class MainMenu : Node2D
         }
         container.GetNode<CanvasItem>("WinLabel").Visible = Global.HasBeatenAllLevels;
         soundControl = container.GetNode<SoundControl>("SoundControl");
+        GlobalSound.GetInstance(this).MusicForeground = false;
     }
 
     public void _on_PlayButton_pressed()

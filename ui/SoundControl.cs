@@ -2,7 +2,7 @@ using Godot;
 
 public class SoundControl : VBoxContainer
 {
-    private const int MIN_VOLUME_DB = -60;
+    private const int MIN_VOLUME_DB = -80;
     private const int MAX_VOLUME_DB = 5;
 
     private const int MASTER_CHANNEL_INDEX = 0;

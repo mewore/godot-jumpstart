@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://audio/actual-loop-background.ogg" type="AudioStream" id=1]
 [ext_resource path="res://audio/GlobalSound.cs" type="Script" id=2]
+[ext_resource path="res://audio/actual-loop-foreground.ogg" type="AudioStream" id=3]
 
 [node name="GlobalSound" type="Node"]
 pause_mode = 2
@@ -9,6 +11,16 @@ script = ExtResource( 2 )
 [node name="Music" type="AudioStreamPlayer" parent="."]
 autoplay = true
 bus = "Music"
+
+[node name="MusicBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+bus = "Music"
+
+[node name="MusicForeground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+bus = "Music Foreground"
 
 [node name="ClearLevel" type="AudioStreamPlayer" parent="."]
 pitch_scale = 0.69

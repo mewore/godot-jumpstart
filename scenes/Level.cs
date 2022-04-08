@@ -17,6 +17,7 @@ public class Level : Node2D
         pauseMenu = GetNode<CanvasItem>("PauseUi/PauseMenu");
         overlay.FadeIn();
         currentLevel = Global.CurrentLevel;
+        GlobalSound.GetInstance(this).MusicForeground = true;
     }
 
     public override void _Process(float delta)
@@ -38,6 +39,7 @@ public class Level : Node2D
             if (!overlay.Transitioning)
             {
                 pauseMenu.Visible = paused = !paused;
+                GlobalSound.GetInstance(this).MusicForeground = !paused;
             }
         }
     }
@@ -72,6 +74,7 @@ public class Level : Node2D
     public void _on_Resume_pressed()
     {
         pauseMenu.Visible = paused = false;
+        GlobalSound.GetInstance(this).MusicForeground = true;
     }
 
     public void _on_RestartLevel_pressed()
