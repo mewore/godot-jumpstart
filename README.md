@@ -1,6 +1,8 @@
 # Godot Jumpstart
 Why should I build a game when I can sculpt it instead?
 
+Demo at: https://mewore.itch.io/godot-jumpstart-demo
+
 ## TODO
 
 - [ ] 💚 MVP idea
