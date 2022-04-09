@@ -170,4 +170,5 @@ if [ "${is_test_web}" == 0 ]; then
   echo "Done"
 else
   godot --no-window --export-debug "HTML5" > "${web_log}"
+  make_zip "${version_dir}/${WEB_DIR}" "${version_dir}/${lowercase_project_name}-web.zip" &
 fi

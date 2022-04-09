@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 public class SoundControl : VBoxContainer
@@ -50,22 +51,30 @@ public class SoundControl : VBoxContainer
 
     public override void _Ready()
     {
-        Global.LoadSettings();
         masterSlider = GetNode<HSlider>("Master/MasterSlider");
-        masterSlider.Value = Global.Settings.MasterVolume;
         masterSlider.Editable = editable;
 
         sfxNode = GetNode<CanvasItem>("Sfx");
         sfxSlider = sfxNode.GetNode<HSlider>("SfxSlider");
-        sfxSlider.Value = Global.Settings.SfxVolume;
 
         musicNode = GetNode<CanvasItem>("Music");
         musicSlider = musicNode.GetNode<HSlider>("MusicSlider");
-        musicSlider.Value = Global.Settings.MusicVolume;
 
-        MasterVolume = Global.Settings.NormalizedMasterVolume;
-        SfxVolume = Global.Settings.NormalizedSfxVolume;
-        MusicVolume = Global.Settings.NormalizedMusicVolume;
+        try
+        {
+            Global.LoadSettings();
+            masterSlider.Value = Global.Settings.MasterVolume;
+            sfxSlider.Value = Global.Settings.SfxVolume;
+            musicSlider.Value = Global.Settings.MusicVolume;
+
+            MasterVolume = Global.Settings.NormalizedMasterVolume;
+            SfxVolume = Global.Settings.NormalizedSfxVolume;
+            MusicVolume = Global.Settings.NormalizedMusicVolume;
+        }
+        catch (Exception)
+        {
+            GD.PrintErr("Exception encountered while loading and setting initial volume!");
+        }
 
         SetNonMasterInputsEditable(masterSlider.Value);
     }

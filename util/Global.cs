@@ -118,6 +118,7 @@ public class Global : Node
         settings = new GameSettings();
         if (data == null)
         {
+            GD.Print("No data for settings could be loaded");
             return;
         }
 
