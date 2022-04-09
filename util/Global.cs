@@ -248,13 +248,13 @@ public class Global : Node
 
 public class GameSettings
 {
-    public int MasterVolume = 0;
+    public int MasterVolume = 20;
     public float NormalizedMasterVolume { get => MasterVolume * .01f; }
 
-    public int SfxVolume = 50;
+    public int SfxVolume = 80;
     public float NormalizedSfxVolume { get => SfxVolume * .01f; }
 
-    public int MusicVolume = 50;
+    public int MusicVolume = 80;
     public float NormalizedMusicVolume { get => MusicVolume * .01f; }
 
     public GameQuality Quality = GameQuality.MEDIUM;
