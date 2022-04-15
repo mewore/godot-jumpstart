@@ -5,7 +5,7 @@ import sys
 
 current_dir = os.path.dirname(__file__)
 project_dir = os.path.join(current_dir, '..')
-exported_web_dir = os.path.join(project_dir, '.export', sys.argv[1], 'web')
+exported_web_dir = os.path.join(project_dir, 'export', sys.argv[1], 'web')
 os.chdir(exported_web_dir)
 
 PORT = 8000

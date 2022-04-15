@@ -10,7 +10,7 @@ data_*/
 # Custom
 logs/
 export/
-.export/
+!export/.gdignore
 
 # Krita
 *.png~

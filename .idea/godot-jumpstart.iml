@@ -12,7 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/export" />
       <excludeFolder url="file://$MODULE_DIR$/.mono_backup" />
       <excludeFolder url="file://$MODULE_DIR$/.mono" />
-      <excludeFolder url="file://$MODULE_DIR$/.export" />
+      <excludeFolder url="file://$MODULE_DIR$/export" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

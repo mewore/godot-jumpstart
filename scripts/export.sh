@@ -31,7 +31,7 @@ EXPORT_PRESETS_FILE='export_presets.cfg'
 DEFAULT_EXPORT_PRESETS_FILE=".scripts/default_${EXPORT_PRESETS_FILE}"
 TMP_EXPORT_PRESETS_FILE="${EXPORT_PRESETS_FILE}.tmp"
 
-EXPORT_DIR='.export'
+EXPORT_DIR='export'
 
 current_version=''
 if [ -f "${EXPORT_PRESETS_FILE}" ]; then
