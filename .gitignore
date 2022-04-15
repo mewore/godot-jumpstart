@@ -9,8 +9,6 @@ data_*/
 
 # Custom
 logs/
-export/
-!export/.gdignore
 
 # Krita
 *.png~
